@@ -1,0 +1,12 @@
+# no *.o or *.a files
+*.[oa]
+# no temporary files
+*~
+*swp
+# ignore all files in the bin/
+directory
+bin/
+# no *.txt files
+*.txt
+# but track input.txt
+! input.txt

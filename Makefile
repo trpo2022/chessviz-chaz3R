@@ -1,7 +1,7 @@
-all: main
-main: main.c
-	gcc -Wall -Werror -o main main.c
+all: chessviz
+chessviz: chessviz.c
+	gcc -Wall -Werror -o chessviz chessviz.c
 clean:
-	rm main
+	rm chessviz
 run:
-	./main
+	./chessviz

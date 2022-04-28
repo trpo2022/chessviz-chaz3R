@@ -1,1 +1,3 @@
-*chessviz
+*.o
+*.a
+*main

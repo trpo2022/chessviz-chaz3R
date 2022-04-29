@@ -22,8 +22,6 @@ int main()
                {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
                {'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'}};
 
-    int P_cnt_moves = 0;
-    int p_cnt_moves = 0;
     int x1, y1, x2, y2;
     char input[n];
 
@@ -40,22 +38,9 @@ int main()
     x2 = rightX(input[3]);
     y2 = rightY(input[4]);
 
-    printf("\nAfter change \n");
-    printf(" x1 - %d\n y1 - %d\n x2 - %d\n y2 - %d\n", x1, y1, x2, y2);
-    printf("\n");
-
     if (board[y1][x1] == 'P' || board[y1][x1] == 'p')
     {
-        if (board[y1][x1] == 'P')
-        {
-            move_pawn(board, x1, y1, x2, y2, P_cnt_moves, p_cnt_moves);
-            P_cnt_moves++;
-        }
-        else
-        {
-            move_pawn(board, x1, y1, x2, y2, P_cnt_moves, p_cnt_moves);
-            p_cnt_moves++;
-        }
+        move_pawn(board, x1, y1, x2, y2);
     }
     else
     {

@@ -1,9 +1,9 @@
-#include "printboard.h"
-#include "coordinates.h"
-#include "move.h"
-//#include "libchessviz/coordinates.h"
-//#include "libchessviz/printboard.h"
-//#include "libchessviz/move.h"
+//#include "printboard.h"
+//#include "coordinates.h"
+//#include "move.h"
+#include "libchessviz/coordinates.h"
+#include "libchessviz/printboard.h"
+#include "libchessviz/move.h"
 #include <stdio.h>
 #include <stdlib.h>
 #define board_size 8

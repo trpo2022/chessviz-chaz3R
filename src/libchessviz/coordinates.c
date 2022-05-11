@@ -60,6 +60,8 @@ int rightY(char y)
         case '8':
             y = 0;
             break;
+        default:
+            y = -1;
     }
     return y;
 }

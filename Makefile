@@ -28,5 +28,5 @@ bin/chessviz: $(OBJCHESS)chessviz.o $(OBJLIB)libchessviz.a
 run:
 	./bin/chessviz
 clean:
-	rm -f $(OBJLIB) *.[oa]
-	rm -f $(OBJCHESS) *.o
+	rm -f $(OBJLIB)*.[oa]
+	rm -f $(OBJCHESS)*.o

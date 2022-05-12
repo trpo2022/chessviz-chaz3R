@@ -40,7 +40,7 @@ START:
 
         int flag = movecheck(board, x1, y1, x2, y2);
 
-        if (flag == 1)
+        if (flag == 0)
         {
             if (board[y1][x1] == 'P' || board[y1][x1] == 'p')
             {
@@ -53,7 +53,7 @@ START:
             printboard(*board);
             goto START;
         }
-        if (flag == 0)
+        if (flag == 1)
         {
             goto START;
         }

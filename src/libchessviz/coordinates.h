@@ -1,4 +1,4 @@
-# pragma once
+#pragma once
 
 int rightX(char x);
 

@@ -1,3 +1,3 @@
-# pragma once
+#pragma once
 
-void printboard(char *board);
+void printboard(char* board);

@@ -1,7 +1,6 @@
 int rightX(char x)
 {
-    switch (x)
-    {
+    switch (x) {
     case 'a':
         x = 0;
         break;
@@ -34,34 +33,33 @@ int rightX(char x)
 
 int rightY(char y)
 {
-    switch(y)
-    {
-        case '1':
-            y = 7;
-            break;
-        case '2':
-            y = 6;
-            break;
-        case '3':
-            y = 5;
-            break;
-        case '4':
-            y = 4;
-            break;
-        case '5':
-            y = 3;
-            break;
-        case '6':
-            y = 2;
-            break;
-        case '7':
-            y = 1;
-            break;
-        case '8':
-            y = 0;
-            break;
-        default:
-            y = -1;
+    switch (y) {
+    case '1':
+        y = 7;
+        break;
+    case '2':
+        y = 6;
+        break;
+    case '3':
+        y = 5;
+        break;
+    case '4':
+        y = 4;
+        break;
+    case '5':
+        y = 3;
+        break;
+    case '6':
+        y = 2;
+        break;
+    case '7':
+        y = 1;
+        break;
+    case '8':
+        y = 0;
+        break;
+    default:
+        y = -1;
     }
     return y;
 }

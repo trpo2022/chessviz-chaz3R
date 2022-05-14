@@ -20,13 +20,27 @@ obj/src/libchessviz/move.o: $(LIBSOURCE)move.c
 obj/src/chessviz/chessviz.o: $(SOURCE)chessviz.c
 	$(CC) $(INCLUDEPATH) $< -o $@
 
-obj/src/libchessviz/libchessviz.a: $(OBJLIB)coordinates.o $(OBJLIB)printboard.o $(OBJLIB)move.o
+obj/test/test.o: $(test)board_test.c
+	$(CC) $(INCLUDEPATH) $< -o $@
+
+obj/test/main.o: $(test)main.c
+	$(CC) $(INCLUDEPATH) $< -o $@
+
+obj/src/libchessviz/libchessviz.a: $(OBJLIB)coordinates.o $(OBJLIB)printboard.o $(OBJLIB)move.o $(test)test.o
 	ar rcs $@ $^
 
-bin/chessviz: $(OBJCHESS)chessviz.o $(OBJLIB)libchessviz.a 
+bin/test: $(test)test.o $(OBJLIB)libchessviz.a
 	gcc $(CFLAGS) $(INCLUDEPATH) $^ -o $@
+
+bin/chessviz: $(OBJCHESS)chessviz.o $(OBJLIB)libchessviz.a
+	gcc $(CFLAGS) $(INCLUDEPATH) $^ -o $@
+
 run:
 	./bin/chessviz
+
+run/test:
+	./bin/test
+
 clean:
 	rm -f $(OBJLIB)*.[oa]
 	rm -f $(OBJCHESS)*.o

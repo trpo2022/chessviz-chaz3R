@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\nIf u want to leave the game write #quite");
+    printf("\nIf u want to leave the game write #quit");
     char board[board_size][board_size]
             = {{'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'},
                {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},

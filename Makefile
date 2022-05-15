@@ -32,10 +32,14 @@ obj/test/test.o: test/board_test.c
 obj/test/main.o: test/main.c
 	gcc -c $(CFLAGS) $(CPPFLAGS) -I thirdparty/ -I src/ -o $@ $<
 
-run/main:
+
+run:
 	./bin/main
 
-run/test:
+make_test:
+	gcc -Wall -Wextra -Werror -I src -MP -MMD -I thirdparty src/libchessviz/coordinates.c src/libchessviz/move.c test/board_test.c test/main.c -o bin/test
+
+runtest:
 	./bin/test
 
 clean:
@@ -45,3 +49,4 @@ clean:
 	rm obj/src/chessviz/*.d
 	rm obj/src/libchessviz/*.d
 	rm -f obj/test/*.o obj/test/*.d
+	rm bin/*.d

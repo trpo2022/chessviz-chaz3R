@@ -1,7 +1,6 @@
 #include <ctest.h>
 #include <libchessviz/coordinates.h>
 #include <libchessviz/move.h>
-#include <libchessviz/printboard.h>
 #define board_size 8
 #define n 5
 

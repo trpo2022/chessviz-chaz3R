@@ -19,6 +19,6 @@ jobs:
         run: make make_test
 
       - name: Star test
-        run: make run
+        run: make runtest
 
 

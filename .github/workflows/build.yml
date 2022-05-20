@@ -14,3 +14,11 @@ jobs:
 
       - name: Build application
         run: make
+
+      - name: Build test
+        run: make make_test
+
+      - name: Star test
+        run: make runt
+
+

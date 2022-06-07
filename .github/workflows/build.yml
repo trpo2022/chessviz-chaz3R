@@ -14,9 +14,6 @@ jobs:
 
       - name: Build application
         run: make
-        
-      - name: Build
-        run: dotnet build --no-restore
 
       - name: Build test
         run: make make_test
